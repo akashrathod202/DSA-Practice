@@ -29,10 +29,21 @@
 
 
 
-arr=[10,20,30,40]
+# arr=[10,20,30,40]
 
-i=1
-j=3
+# i=1
+# j=3
 
-arr[j],arr[i] =arr[i] ,arr[j]
-print(arr)
+# arr[j],arr[i] =arr[i] ,arr[j]
+# print(arr)
+
+
+
+#linear searach
+
+def serach(arr,target):
+    for i in range(len(arr)):
+        if arr[i]== target:
+            return i
+    
+print(serach([3,5,7,9],9))
