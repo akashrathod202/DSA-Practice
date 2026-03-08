@@ -41,9 +41,23 @@
 
 #linear searach
 
-def serach(arr,target):
-    for i in range(len(arr)):
-        if arr[i]== target:
-            return i
-    
-print(serach([3,5,7,9],9))
+# def serach(arr,target):
+#     for i in range(len(arr)):
+#         if arr[i]== target:
+#             return i
+#     return -1
+# print(serach([3,5,7,9],9))
+
+
+
+# check the array is sorted or not
+
+def is_sorted(arr):
+    for i in range(len(arr)-1):
+        if arr[i] > arr[i +1]:
+            return False
+    return True
+
+
+arrs=[3,4,5,4,3,6]
+print(is_sorted(arrs))
