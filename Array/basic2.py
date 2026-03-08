@@ -58,12 +58,34 @@
 #     return True
 
 # checking from last
-def is_sorted(arr):
-    for i in range(len(arr)-1):
-        if arr[i] < arr[i + 1]:
-            return False
-    return True
+# def is_sorted(arr):
+#     for i in range(len(arr)-1):
+#         if arr[i] < arr[i + 1]:
+#             return False
+#     return True
 
 
-arrs=[7,6,5,4,3,6]
-print(is_sorted(arrs))
+# arrs=[7,6,5,4,3,6]
+# print(is_sorted(arrs))
+
+
+# star pattarn
+
+# n=5
+# # for i in range(n):
+# #     for j in range(n):
+# #       print("*",end ='')
+# #     print()
+
+
+
+n = 4
+
+for i in range(n):        # rows
+    for j in range(n-i):    # columns
+        print("*", end=" ")
+    print()
+
+
+
+
