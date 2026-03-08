@@ -79,13 +79,33 @@
 
 
 
-n = 4
+# n = 4
 
-for i in range(n):        # rows
-    for j in range(n-i):    # columns
-        print("*", end=" ")
-    print()
-
-
+# for i in range(n):        # rows
+#     for j in range(n-i):    # columns
+#         print("*", end=" ")
+#     print()
 
 
+
+
+
+
+
+# ___________________________________________________________________
+
+# array rotation
+
+    # 1]  left rotate by 1
+
+def left_rotate(arr):
+    first=arr[0]
+
+    for i in range(len(arr)-1):
+        arr[i] = arr[i+1]
+
+    arr[len(arr)-1]=first
+    return arr
+
+arr =[1,2,3,4,5]
+print(left_rotate(arr))
