@@ -50,14 +50,20 @@
 
 
 
-# check the array is sorted or not
+# check the array is sorted or n
+# def is_sorted(arr):
+#     for i in range(len(arr)-1):
+#         if arr[i] > arr[i +1]:
+#             return  False
+#     return True
 
+# checking from last
 def is_sorted(arr):
     for i in range(len(arr)-1):
-        if arr[i] > arr[i +1]:
+        if arr[i] < arr[i + 1]:
             return False
     return True
 
 
-arrs=[3,4,5,4,3,6]
+arrs=[7,6,5,4,3,6]
 print(is_sorted(arrs))
