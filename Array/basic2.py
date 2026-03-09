@@ -57,6 +57,12 @@
 #             return  False
 #     return True
 
+
+
+
+
+
+
 # checking from last
 # def is_sorted(arr):
 #     for i in range(len(arr)-1):
@@ -98,14 +104,32 @@
 
     # 1]  left rotate by 1
 
-def left_rotate(arr):
-    first=arr[0]
+# def left_rotate(arr):
+#     first=arr[0]
 
-    for i in range(len(arr)-1):
-        arr[i] = arr[i+1]
+#     for i in range(len(arr)-1):
+#         arr[i] = arr[i+1]
 
-    arr[len(arr)-1]=first
+#     arr[len(arr)-1]=first
+#     return arr
+
+# arr =[1,2,3,4,5]
+# print(left_rotate(arr))
+
+
+
+def right_rotate(arr):
+    last = arr[-1]
+
+    for i in range(len(arr)-1,0,-1):
+        arr[i] = arr[i-1]
+
+    arr[0]=last
     return arr
 
-arr =[1,2,3,4,5]
-print(left_rotate(arr))
+arr =[1,2,3,4,5,6]
+print(right_rotate(arr))
+
+
+
+
