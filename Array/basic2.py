@@ -118,17 +118,37 @@
 
 
 
-def right_rotate(arr):
-    last = arr[-1]
+# def right_rotate(arr):
+#     last = arr[-1]
 
-    for i in range(len(arr)-1,0,-1):
-        arr[i] = arr[i-1]
+#     for i in range(len(arr)-1,0,-1):
+#         arr[i] = arr[i-1]
 
-    arr[0]=last
-    return arr
+#     arr[0]=last
+#     return arr
 
+# arr =[1,2,3,4,5,6]
+# print(right_rotate(arr))
+
+
+
+
+
+
+# rotate array by k postions
+
+def rotateby_k (arr,k):
+    for _ in range(k):
+        e=arr.pop()
+        arr.insert(0,e)
+
+
+k=3
 arr =[1,2,3,4,5,6]
-print(right_rotate(arr))
+rotateby_k(arr,k)
+print(arr)
+
+ 
 
 
 
