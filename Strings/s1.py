@@ -25,19 +25,39 @@ print("hello world")
 
 
 
-num =int(input("enter the number :"))
-orignal = num
-rev=0
-digit=''
+# num =int(input("enter the number :"))
+# orignal = num
+# rev=0
+# digit=''
+# while num != 0:
+#    digit = num % 10
+#    rev =rev * 10 + digit
+#    num = num // 10
+# print(rev)
+# if orignal == rev :
+#    print(" this is palndrome",rev)
+# else:
+#    print("this is not palndrome",rev)
+
+
+
+
+# armstrong 
+
+num =153 
+temp = num
+total=0
+nod = len(str(num))
 while num != 0:
-   digit = num % 10
-   rev =rev * 10 + digit
-   num = num // 10
-print(rev)
-if orignal == rev :
-   print(" this is palndrome",rev)
+    digit=num % 10
+    total=total + digit ** nod
+    num =num // 10
+print(total)
+
+if temp == total :
+    print("armstrong")
 else:
-   print("this is not palndrome",rev)
+    print("not a armstrong")
 
 
      
