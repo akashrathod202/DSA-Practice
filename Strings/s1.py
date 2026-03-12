@@ -69,14 +69,52 @@ num =153
 #     if d % 2 != 0:
 #        odd = d
 #        print(odd ,end='')
-#     num = num // 10    
+#     num = num // 10 
+# 
+# 
+# 
+# 
+#    
 
 
-# largest odd number in string
-num="8934"
-ans=""
-for i in range(len(num)-1,-1,-1):
-    if int(num[i]) % 2 != 0:
-        ans=num[:i+1]
-        break
-print(ans)
+
+
+# largest odd sub string in string
+
+# # to solve this problem traverse the string from last. 
+# # check the first odd num from that index to first index there will be the largest odd substring
+# num="8934"
+# ans=""
+# for i in range(len(num)-1,-1,-1):
+#     if int(num[i]) % 2 != 0:
+#         ans=num[:i+1]
+#         #ans = num[:3]
+#         break
+# print(ans)
+
+
+
+
+#isomophic problem
+
+def is_isomorphic(s, t):
+    map1 = {}
+    map2 = {}
+
+    for i in range(len(s)):
+        if s[i] in map1:
+            if map1[s[i]] != t[i]:
+                return False
+        else:
+            map1[s[i]] = t[i]
+
+        if t[i] in map2:
+            if map2[t[i]] != s[i]:
+                return False
+        else:
+            map2[t[i]] = s[i]
+
+    return True
+
+
+print(is_isomorphic("egg","add"))
