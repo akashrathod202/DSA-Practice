@@ -61,14 +61,22 @@ num =153
 
 
      
-num=52731
-odd=0
+# num=52731
+# odd=0
 
-while num >0:
-    d=num % 10
-    if d % 2 != 0:
-       odd = d
-       print(odd ,end='')
+# while num >0:
+#     d=num % 10
+#     if d % 2 != 0:
+#        odd = d
+#        print(odd ,end='')
+#     num = num // 10    
 
-    num = num // 10    
 
+# largest odd number in string
+num="8934"
+ans=""
+for i in range(len(num)-1,-1,-1):
+    if int(num[i]) % 2 != 0:
+        ans=num[:i+1]
+        break
+print(ans)
