@@ -45,20 +45,30 @@ print("hello world")
 # armstrong 
 
 num =153 
-temp = num
-total=0
-nod = len(str(num))
-while num != 0:
-    digit=num % 10
-    total=total + digit ** nod
-    num =num // 10
-print(total)
+# temp = num
+# total=0
+# nod = len(str(num))
+# while num != 0:
+#     digit=num % 10
+#     total=total + digit ** nod
+#     num =num // 10
+# print(total)
 
-if temp == total :
-    print("armstrong")
-else:
-    print("not a armstrong")
+# if temp == total :
+#     print("armstrong")
+# else:
+#     print("not a armstrong")
 
 
      
+num=52731
+odd=0
+
+while num >0:
+    d=num % 10
+    if d % 2 != 0:
+       odd = d
+       print(odd ,end='')
+
+    num = num // 10    
 
