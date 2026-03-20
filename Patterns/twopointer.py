@@ -1,18 +1,105 @@
-def two_sum(arr,target):
-    left=0
-    right=len(arr)-1
+# def two_sum(arr,target):
+#     left=0
+#     right=len(arr)-1
 
-    while left < right:
-        s =arr[left] + arr [right]
+#     while left < right:
+#         s =arr[left] + arr [right]
 
-        if s == target :
-            return left,right
-        elif s < target:
-            left +=1
-        else:
-            right -=1
-    return -1
+#         if s == target :
+#             return left,right
+#         elif s < target:
+#             left +=1
+#         else:
+#             right -=1
+#     return -1
 
-arr=[2,3,4,5,7,5,3,89,5,7]
-k=8
-print(two_sum(arr,k))
+# arr=[2,3,4,5,7,5,3,89,5,7]
+# k=8
+# print(two_sum(arr,k))
+
+
+
+# def check_palndrome(str):
+#     left=0
+#     right=len( str)-1
+
+#     while left < right:
+#         if str[left] != str[right]:
+#             return False
+        
+#         left +=1
+#         right-=1
+#     return True  
+
+
+
+
+
+# s='maam'
+# print(check_palndrome(s))
+
+
+
+# palndromes
+
+# def check_it(s):
+#     s=s.replace(" ","").lower()
+
+#     left=0
+#     right=len(s)-1
+
+#     while left < right:
+
+#         if s[left] != s[right]:
+#             return False
+        
+#         left +=1
+#         right -=1
+
+#     return True
+
+# s="A man a plan canal Panama"
+# print(check_it(s))
+
+
+
+# def check_it(s):
+
+#     left=0
+#     right=len(s)-1
+
+#     while left < right:
+
+#         if s[left] == s[right]:
+             
+        
+#         left +=1
+#         right -=1
+        
+#     return True
+
+# s=[2,3,5,3,7,8,4]
+# print(check_it(s))
+
+
+
+
+# remove duplicate
+
+def remove_duplicates(arr):
+    if len(arr)== 0:
+        return 0
+    slow =0
+    for fast in range(1, len(arr)):
+        if arr[slow] != arr[fast]:
+           
+            slow+=1
+
+            arr[slow]=arr[fast]
+    return slow+1
+
+arr=[1,2,2,3,4,3,6,4,7,87,54]
+print(remove_duplicates(arr))
+
+
+
