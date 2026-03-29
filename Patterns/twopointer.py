@@ -86,20 +86,52 @@
 
 # remove duplicate
 
-def remove_duplicates(arr):
-    if len(arr)== 0:
-        return 0
-    slow =0
-    for fast in range(1, len(arr)):
-        if arr[slow] != arr[fast]:
+# def remove_duplicates(arr):
+#     if len(arr)== 0:
+#         return 0
+#     slow =0
+#     for fast in range(1, len(arr)):
+#         if arr[slow] != arr[fast]:
            
-            slow+=1
+#             slow+=1
 
-            arr[slow]=arr[fast]
-    return slow+1
+#             arr[slow]=arr[fast]
+#     return slow+1
 
-arr=[1,2,2,3,4,3,6,4,7,87,54]
-print(remove_duplicates(arr))
+# arr=[1,2,2,3,4,3,64,7,87,54]
+# print(remove_duplicates(arr))
+
+
+# move zeros
+
+# def move_zeros(arr):
+#     if len(arr)==0 :
+#        return 0
+#     left=0
+#     right=len(arr)-1
+
+#     for i in range(len(arr)):
+#         if arr[left] == 0:
+#             arr[right]=arr[left]
+
+# arr=[1,2,3,0,4,6,0,9]
+# print(move_zeros(arr))
+
+
+
+def movez(arr):
+    left=0
+
+    for right in range(len(arr)):
+        if arr[right] != 0:
+            arr[left], arr[right] =arr[right],arr[left]
+            left+=1
+    return arr
+
+arr=[0,4,3,40,34,0,34,34]
+print(movez(arr))
+          
+
 
 
 
