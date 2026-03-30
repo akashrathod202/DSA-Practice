@@ -10,23 +10,7 @@
        
 
 
-# subarray sum equal k
-# def cntSubarrays(arr, k):
-#     left=0
-#     sum=0
-#     prifix=[]
-#     for i in arr:
-#         if sum == k:
-#             left+=1
-#         sum+=i
-#         prifix.append(sum)
-        
-        
-#     return prifix
-    
-# arr=[1,-1,0,1,2,-1,3]
-# k=3
-# print(cntSubarrays(arr,k))
+ 
         
 
 def prfix_sum(s,k):
@@ -41,3 +25,24 @@ def prfix_sum(s,k):
 s=[1,2,3,4,4,3,2,5,5,]
 k=5
 print(prfix_sum(s,k))
+
+
+
+
+
+
+
+def subarraySum(nums, k):
+    prefix_sum = 0
+    count = 0
+    hashmap = {0: 1}  # important (base case)
+    
+    for num in nums:
+        prefix_sum += num
+        
+        if (prefix_sum - k) in hashmap:
+            count += hashmap[prefix_sum - k]
+        
+        hashmap[prefix_sum] = hashmap.get(prefix_sum, 0) + 1
+    
+    return count
