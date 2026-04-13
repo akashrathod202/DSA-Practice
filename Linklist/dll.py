@@ -33,6 +33,7 @@ class doublyll:
            self.head.prev=temp
            self.head=temp
 
+
       def insert_atmid(self,data,x):
            new_node=Node(data)
 
@@ -44,14 +45,94 @@ class doublyll:
 
            while t is not None:
                 if t.data == x:
+                    
                     new_node.next=t.next
                     t.next.prev=new_node
                     t.next=new_node
                     new_node.prev=t
                 t=t.next
                      
- 
 
+     #  def deletelall(self,value):
+           
+          #  if self.head is None:
+          #       print("List is empty")
+          #       return
+           
+          #  t=self.head
+
+          #  if self.head.data == value
+          #       self.head=t.next
+          #       self.head.prev=None
+          #       return   
+          #  while t is not None:
+          #       if t.data == value:
+          #            t.prev.next=t.next
+          #            t.next.prev=t.prev
+          #            return
+          #  if t.data== value:
+          #       t.prev.next=None
+          #  t=t.next
+                
+      def deleteat_start(self):
+           if self.head == None:
+                print("this list is empty")
+                return
+           if self.head.next is None:
+                self.head=None
+                return
+           self.head=self.head.next 
+           self.head.prev=None
+
+
+      def deleteat_at_end(self):
+           if self.head is None:
+                print("list is empty")
+
+           t=self.head
+
+           if self.head == None:
+                self.head=None
+                return
+           
+           while t.next is not None:
+                t=t.next
+           t.prev.next=None
+
+
+      def deleate_at_mid(self,value):
+          if self.head is None:
+             print("list is empty")
+             return
+
+          t=self.head
+
+          if t.data == value:
+              if t.next is not None:
+                 self.head = t.next
+                 self.head.prev = None
+              else:
+            # only one node
+                self.head = None
+              return
+
+
+          while t is not None:
+               if t.data== value:
+
+                 if t.next is not None:
+                      t.prev.next=t.next
+                      t.next.prev=t.prev
+
+                 else:
+                      t.prev.next=None
+
+                 return
+               t=t.next
+          print("value not found")
+
+                
+      
            
            
       def printall(self):
@@ -74,6 +155,9 @@ obj.insert_atend(20)
 obj.insert_atend(30)
 obj.insert_atstart(5)
 obj.insert_atmid(50,20)
+obj.deleteat_at_end()
+obj.deleate_at_mid(20)
+obj.deleteat_start()
 obj.printall()
            
 
