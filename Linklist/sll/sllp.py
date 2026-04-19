@@ -258,80 +258,83 @@
 
 
 
-class Node:
-    def __init__(self,data):
-        self.data=data
-        self.next=None
 
-class sll:
-    def __init__(self):
-        self.head=None
+# # question of cycle detect
 
-    def inset_at_end(self,value):
-        newnode=Node(value)
+# class Node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.next=None
 
-        if self.head == None:
-            self.head=newnode
-            return
+# class sll:
+#     def __init__(self):
+#         self.head=None
+
+#     def inset_at_end(self,value):
+#         newnode=Node(value)
+
+#         if self.head == None:
+#             self.head=newnode
+#             return
         
-        temp=self.head
+#         temp=self.head
 
-        while temp.next != None:
-            temp=temp.next
+#         while temp.next != None:
+#             temp=temp.next
         
-        temp.next=newnode
+#         temp.next=newnode
 
-        # finding the middle useing the slow and fast pointe
+#         # finding the middle useing the slow and fast pointe
 
-    def find_mid(self):
+#     def find_mid(self):
 
-        slow=self.head
-        fast=self.head
+#         slow=self.head
+#         fast=self.head
 
 
-        while fast and fast.next:
-            slow=slow.next
-            fast=fast.next.next
+#         while fast and fast.next:
+#             slow=slow.next
+#             fast=fast.next.next
 
         
        
-        return slow
+#         return slow
 
 
-    def has_cycle(self):
-        slow=self.head
-        fast=self.head
+#     def has_cycle(self):
+#         slow=self.head
+#         fast=self.head
 
-        while fast and fast.next:
-            slow=slow.next
-            fast=fast.next.next
+#         while fast and fast.next:
+#             slow=slow.next
+#             fast=fast.next.next
 
-            if slow == fast:
-                return True
+#             if slow == fast:
+#                 return True
             
-        return False
+#         return False
 
 
-    def print(self):
-        if self.head == None:
-            return
+#     def print(self):
+#         if self.head == None:
+#             return
         
-        t=self.head
+#         t=self.head
 
-        while t != None:
-            print(t.data,end="->")
-            t=t.next
+#         while t != None:
+#             print(t.data,end="->")
+#             t=t.next
 
-obj = sll()
-obj.inset_at_end(1)
-obj.inset_at_end(2)
-obj.inset_at_end(3)
-obj.inset_at_end(4)
-obj.inset_at_end(5)
+# obj = sll()
+# obj.inset_at_end(1)
+# obj.inset_at_end(2)
+# obj.inset_at_end(3)
+# obj.inset_at_end(4)
+# obj.inset_at_end(5)
 
-obj.print()
+# obj.print()
 
-middle = obj.find_mid()
-print("middle element is:", middle.data)
+# middle = obj.find_mid()
+# print("middle element is:", middle.data)
 
-print("Cycle present:", obj.has_cycle())
+# print("Cycle present:", obj.has_cycle())
