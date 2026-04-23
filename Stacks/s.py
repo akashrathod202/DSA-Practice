@@ -1,3 +1,5 @@
+# emplementing link list 
+
 # class stack:
 #     def __init__(self):
 #         self.s= []
@@ -39,65 +41,102 @@
 
         
         
+# emplementing using linklist
     
-class Node:
-   def __init__(self,data):
-      self.data=data
-      self.next=None
+# class Node:
+#    def __init__(self,data):
+#       self.data=data
+#       self.next=None
 
-class stack:
-   def __init__(self):
-      self.Top=None
+# class stack:
+#    def __init__(self):
+#       self.Top=None
      
     
-   def is_empty(self):
-       return self.Top is None
+#    def is_empty(self):
+#        return self.Top is None
         
       
 
-   def push(self,value):
-       temp=Node(value)
+#    def push(self,value):
+#        temp=Node(value)
 
-       temp.next=self.Top
-       self.Top=temp
+#        temp.next=self.Top
+#        self.Top=temp
 
-   def peek(self):
-       if self.is_empty():
-           raise Exception("stack is empty")
-       return self.Top.data
+#    def peek(self):
+#        if self.is_empty():
+#            raise Exception("stack is empty")
+#        return self.Top.data
    
-   def pop(self):
-      if self.Top is None:
-         raise Exception("stack is empty")
+#    def pop(self):
+#       if self.Top is None:
+#          raise Exception("stack is empty")
 
 
-      popped=self.Top.data
-      self.Top=self.Top.next
-      return popped
+#       popped=self.Top.data
+#       self.Top=self.Top.next
+#       return popped
    
 
-   def display(self):
-      temp=self.Top
-      while temp:
-          print(temp.data,end="->")
-          temp=temp.next
-      print("none")
+#    def display(self):
+#       temp=self.Top
+#       while temp:
+#           print(temp.data,end="->")
+#           temp=temp.next
+#       print("none")
 
 
 
-stk = stack()
-stk.push(10)
-stk.push(20)
-stk.push(30)
+# stk = stack()
+# stk.push(10)
+# stk.push(20)
+# stk.push(30)
 
-stk.display()   # 30 -> 20 -> 10 -> None
+# stk.display()   # 30 -> 20 -> 10 -> None
 
-print(stk.pop())  # 30
-print(stk.peek()) # 20
-      
+# print(stk.pop())  # 30
+# print(stk.peek()) # 20
 
 
+
+
+# check the valid parenthese
+
+
+def is_valid(s):
+    stack=[]
+
+    for bracket in s:
+        if bracket == "[" or bracket == "{" or bracket == "(" :
+            stack.append(bracket)
+        else:
+            if len(stack) == 0:
+                return False
+            ch=stack.pop()
+
+            if (
+                (bracket == "]" and ch == "[")
+                or (bracket == "}" and ch =="{")
+                or (bracket == ")" and ch == "(")
+            ):
+               
+               continue
+            else:
+                return False
+    if len(stack) == 0:
+        return True
+    else:
+        return False  
     
 
 
-      
+print(is_valid("()"))        # True
+print(is_valid("({[]})"))    # True
+print(is_valid("(]"))        # False
+print(is_valid("([)]"))      # False
+
+
+
+
+ 
