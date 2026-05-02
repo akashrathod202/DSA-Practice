@@ -141,24 +141,52 @@
 
 # postfix to infix
 
-class solution:
-    def postfix_to_infix(self,s):
-        stack=[]
-        for ch in s:
-            if ch.isalnum():
-               stack.append(ch)
+# class solution:
+#     def postfix_to_infix(self,s):
+#         stack=[]
+#         for ch in s:
+#             if ch.isalnum():
+#                stack.append(ch)
             
-            else:
-             op1=stack.pop()
-             op2=stack.pop()
-             ans=f"({op2}{ch}{op1})"
+#             else:
+#              op1=stack.pop()
+#              op2=stack.pop()
+#              ans=f"({op2}{ch}{op1})"
 
-             stack.append(ans)
+#              stack.append(ans)
 
-        return stack[-1]
+#         return stack[-1]
 
         
 
+# obj=solution()
+# print(obj.postfix_to_infix('ab-de+f*/')
+# )
+
+
+
+
+# prifix to infix
+
+
+class solution:
+    def prifix_to_infix(self,s):
+        stack=[]
+
+        temp=s[::-1]
+        for ch in temp:
+            if ch.isalnum():
+                stack.append(ch)
+
+            else:
+                op1=stack.pop()
+                op2=stack.pop()
+
+                new=f"({op1}{ch}{op2})"
+                stack.append(new)
+        return stack[-1]
+
+
 obj=solution()
-print(obj.postfix_to_infix('ab-de+f*/')
-)
+print(obj.prifix_to_infix("*+abc"))
+
