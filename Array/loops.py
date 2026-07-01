@@ -41,19 +41,39 @@
 # reversed array
 
 arr=[41,25,3,4,5,6,7]
-# revers_arr=arr[::-1]
-# print(revers_arr)
+# # revers_arr=arr[::-1]
+# # print(revers_arr)
 
-left =0
-right=len(arr)-1
+# left =0
+# right=len(arr)-1
 
-while left < right:
-    arr[left],arr[right]=arr[right],arr[left]
-    left+=1
-    right-=1
-print(arr)
+# while left < right:
+#     arr[left],arr[right]=arr[right],arr[left]
+#     left+=1
+#     right-=1
+# print(arr)
     
 
+
+# second largest
+
+
+# def senon_l(arr):
+#     larger=float('-inf')
+#     second=float('-inf')
+    
+    
+#     for num in arr:
+#         if num > larger:
+#             second = larger
+#             larger = num
+#         elif num > second and num != larger:
+#                 second=num
+#     print(second)
+
+# arr=[12,4,5,5,6,8,8,59,76,]
+# senon_l(arr)
+            
     
     
  
