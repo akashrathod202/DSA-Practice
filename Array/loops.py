@@ -103,8 +103,24 @@ arr=[41,25,3,4,5,6,7]
 
 
 
+# check the array is sorrted or not
 
-            
+arr=[12,4,5,5,6,8,8,59,76]
+is_sorted=True
+for i in range(1,len(arr)):
+      if arr[i] < arr[i-1]:
+          is_sorted=False
+          break
+      
+if is_sorted:
+    print("array is sorted")
+else:
+    print("array is not sorted")
+      
+  
+
+
+   
     
     
  
