@@ -73,6 +73,37 @@ arr=[41,25,3,4,5,6,7]
 
 # arr=[12,4,5,5,6,8,8,59,76,]
 # senon_l(arr)
+
+
+
+
+# def thiredlargest(arr):
+#     largest=float('-inf')
+#     second=float('-inf')
+#     third=float('-inf')
+    
+#     for num in arr:
+#         if  num > largest :
+#             third = second
+#             second = largest
+#             largest = num
+            
+#         elif num > second and num != largest:
+#              third = second
+#              second = num
+                
+#         elif num > third and num != second and num != largest:
+#             third =num
+            
+#     print(largest,second,third)
+  
+  
+# arr=[12,4,5,5,6,8,8,59,76,]  
+# thiredlargest(arr)
+
+
+
+
             
     
     
