@@ -121,23 +121,42 @@ arr=[41,25,3,4,5,6,7]
 # ind the largest and smallest elements in an array
 
 
-def find_max(arr):
-    largest = arr[0]
-    smallest = arr[0]
+# def find_max(arr):
+#     largest = arr[0]
+#     smallest = arr[0]
 
-    for num in arr:
-        if num > largest:
-            largest = num
-        elif num < smallest:
-            smallest = num
+#     for num in arr:
+#         if num > largest:
+#             largest = num
+#         elif num < smallest:
+#             smallest = num
 
-    return largest, smallest
+#     return largest, smallest
 
-arr = [2, 4, 5, 69872, 5, 6, 45, 6454, 1]
+# arr = [2, 4, 5, 69872, 5, 6, 45, 6454, 1]
 
-largest, smallest = find_max(arr)
-print("Largest:", largest)
-print("Smallest:", smallest)
+# largest, smallest = find_max(arr)
+# print("Largest:", largest)
+# print("Smallest:", smallest)
+
+
+# implement brute-force right array rotation
+
+def right(arr,k):
+    n=len(arr)
+    
+    for i in range(k):
+        last=arr[i-1]
+        
+        for i in range(n-1,0,-1):
+            arr[i]=arr[i-1]
+            
+        
+        arr[0]=last
+    return num
+    
+num=[1,2,3,4,5]
+print(right(num,1))
 
 
 
