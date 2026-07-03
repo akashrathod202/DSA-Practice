@@ -105,19 +105,41 @@ arr=[41,25,3,4,5,6,7]
 
 # check the array is sorrted or not
 
-arr=[12,4,5,5,6,8,8,59,76]
-is_sorted=True
-for i in range(1,len(arr)):
-      if arr[i] < arr[i-1]:
-          is_sorted=False
-          break
+# arr=[12,4,5,5,6,8,8,59,76]
+# is_sorted=True
+# for i in range(1,len(arr)):
+#       if arr[i] < arr[i-1]:
+#           is_sorted=False
+#           break
       
-if is_sorted:
-    print("array is sorted")
-else:
-    print("array is not sorted")
+# if is_sorted:
+#     print("array is sorted")
+# else:
+#     print("array is not sorted")
       
   
+# ind the largest and smallest elements in an array
+
+
+def find_max(arr):
+    largest = arr[0]
+    smallest = arr[0]
+
+    for num in arr:
+        if num > largest:
+            largest = num
+        elif num < smallest:
+            smallest = num
+
+    return largest, smallest
+
+arr = [2, 4, 5, 69872, 5, 6, 45, 6454, 1]
+
+largest, smallest = find_max(arr)
+print("Largest:", largest)
+print("Smallest:", smallest)
+
+
 
 
    
