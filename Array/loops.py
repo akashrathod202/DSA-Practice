@@ -142,21 +142,36 @@ arr=[41,25,3,4,5,6,7]
 
 # implement brute-force right array rotation
 
-def right(arr,k):
-    n=len(arr)
+# def right(arr,k):
+#     n=len(arr)
     
-    for i in range(k):
-        last=arr[i-1]
+#     for i in range(k):
+#         last=arr[i-1]
         
-        for i in range(n-1,0,-1):
-            arr[i]=arr[i-1]
+#         for i in range(n-1,0,-1):
+#             arr[i]=arr[i-1]
             
         
-        arr[0]=last
-    return num
+#         arr[0]=last
+#     return num
     
-num=[1,2,3,4,5]
-print(right(num,1))
+# num=[1,2,3,4,5]
+# print(right(num,1))
+
+
+
+# def left_rotation(arr,k):
+#     n=len(arr)
+#     for i in range(k):
+#         first=arr[0]
+#         for i in range(1,n,1):
+#             arr[i-1]=arr[i]
+        
+#         arr[-1]=first
+#     return arr
+    
+# arr=[1,2,3,4,5]
+# print(left_rotation(arr,1))
 
 
 
