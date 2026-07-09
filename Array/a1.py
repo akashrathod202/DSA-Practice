@@ -1,6 +1,5 @@
-# # we can't use array directly in python for that we have 2 ways:
-# # 1 through Module
-# # 2 through numpy
+ # Python's built-in data structure for DSA is List.
+# There is also an array module and NumPy arrays for specific use cases.
 
 # import array as arr
 # from array import *  

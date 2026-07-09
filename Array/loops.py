@@ -40,7 +40,7 @@
 
 # reversed array
 
-arr=[41,25,3,4,5,6,7]
+# arr=[41,25,3,4,5,6,7]
 # # revers_arr=arr[::-1]
 # # print(revers_arr)
 
@@ -160,6 +160,9 @@ arr=[41,25,3,4,5,6,7]
 
 
 
+
+# implement brute-force Left array rotation  k times
+
 # def left_rotation(arr,k):
 #     n=len(arr)
 #     for i in range(k):
@@ -175,6 +178,26 @@ arr=[41,25,3,4,5,6,7]
 
 
 
+# checking is this a pladrome or not using two pointer
+
+
+arr=[1,2,3,2,1]
+left=0
+right=len(arr)-1
+
+is_palindrome=True
+
+while left < right:
+     if arr[left]  != arr[right]:
+         is_palindrome=False
+         break
+     left+=1
+     right-=1
+     
+if is_palindrome:
+    print("this is a palindrome")
+else:
+    print("this not a palindrome")
 
    
     
