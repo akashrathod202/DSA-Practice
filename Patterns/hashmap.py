@@ -16,6 +16,7 @@
 
 
 
+
 # def two_sum(arr,target):
 #     hashmap={}
 
@@ -52,15 +53,18 @@
 
 
 def count(a, b):
-    n = min(len(a), len(b))
-    hashmap={}
-    count=0
     
-    for i in range(n):
-        hashmap[i]=hashmap.get(i,0)+1
-        if i in hashmap:
-            count += 1
-    
+    freq={}
+
+    for num in a:
+        freq[num]=freq.get(num,0)+1
+         
+    count =0   
+
+    for i in b:
+        if num in freq:
+            count+=1
+
     return count
 
 a = [1,2,3,4,5,6,7,8,9,10]
@@ -69,3 +73,4 @@ b = [3,45,6,7,8,4,3,2,1]
 print(count(a, b))
 
 
+ 

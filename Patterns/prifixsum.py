@@ -126,30 +126,46 @@
 
 
 
-def maxlen(arr):
-     n=len(arr)
-     maxlength=0   
+# longest sub array equal 0
+
+
+# def maxlen(arr):
+#      n=len(arr)
+#      maxlength=0   
    
-     for i in range(n):
-        currurentsum=0
+#      for i in range(n):
+#         currurentsum=0
 
-        for j in range(i,n):
-           currurentsum+=arr[j]
+#         for j in range(i,n):
+#            currurentsum+=arr[j]
 
-           if currurentsum == 0:
-            length=j-i+1
-            maxlength=max(maxlength,length)
+#            if currurentsum == 0:
+#             length=j-i+1
+#             maxlength=max(maxlength,length)
 
-     return maxlength
-
-
-arr = [1, 0, -4, 3, 1, 0]
-print(maxlen(arr))
+#      return maxlength
 
 
+# arr = [1, 0, -4, 3, 1, 0]
+# print(maxlen(arr))
 
 
-max
+
+
+# optimal solution
+def mexlen(arr):
+    prifix_sum=0
+    hasmap={}
+    max_length=0
+
+    for i in range(len(arr)):
+        prefix_sum+=arr[i]
+
+        if prifix_sum==0:
+            max_length = i + 1
+
+            
+
 
 
  
