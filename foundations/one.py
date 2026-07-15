@@ -33,13 +33,44 @@
 
 
 
-def count_occurrence(arr,k):
-    count=0
-    for i in range(len(arr)):
-        if arr[i] == k:
-         count+=1
-    return count
+# def count_occurrence(arr,k):
+#     count=0
+#     for i in range(len(arr)):
+#         if arr[i] == k:
+#          count+=1
+#     return count
     
-arr = [2, 5, 2, 7, 2, 8]
-print(count_occurrence(arr,2))
+# arr = [2, 5, 2, 7, 2, 8]
+# print(count_occurrence(arr,2))
+
+
+
+
+
+# def first_occurence(arr,k):
+#     for  i in range(0,len(arr)):
+#         if k == arr[i]:
+#             return i
+#             break
+        
+#     return -1
+    
+# arr=[3,3,4,5,6,77,57,5,45,45]
+# print (first_occurence(arr,45))
+
+
+
+def last_occurance(arr,k):
+    for i in range(len(arr)-1,-1 ,-1):
+        if k == arr[i]:
+         return arr[i],i
+         break
+    return -1
+            
+        
+arr=[3,3,4,5,6,77,57,5,45,45]
+print (last_occurance(arr,45))
+        
+
+
 
