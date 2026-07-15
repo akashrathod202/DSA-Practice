@@ -19,15 +19,27 @@
 # print("Element:", element)
 # print("Frequency:", large)
 
-def check(arr,k):
-     for i in range(0,len(arr)):
-        if arr[i] == k:
-          return i,arr[i]
+# def check(arr,k):
+#      for i in range(0,len(arr)):
+#         if arr[i] == k:
+#           return i,arr[i]
           
-     return -1
+#      return -1
      
  
 
-arr= [5, 8, 2, 10, 6]
-print(check(arr,8))
+# arr= [5, 8, 2, 10, 6]
+# print(check(arr,8))
+
+
+
+def count_occurrence(arr,k):
+    count=0
+    for i in range(len(arr)):
+        if arr[i] == k:
+         count+=1
+    return count
+    
+arr = [2, 5, 2, 7, 2, 8]
+print(count_occurrence(arr,2))
 
