@@ -60,17 +60,18 @@
 
 
 
-def last_occurance(arr,k):
-    for i in range(len(arr)-1,-1 ,-1):
-        if k == arr[i]:
-         return arr[i],i
-         break
-    return -1
+# def last_occurance(arr,k):
+#     for i in range(len(arr)-1,-1 ,-1):
+#         if k == arr[i]:
+#          return arr[i],i
+#          break
+#     return -1
             
         
-arr=[3,3,4,5,6,77,57,5,45,45]
-print (last_occurance(arr,45))
+# arr=[3,3,4,5,6,77,57,5,45,45]
+# print (last_occurance(arr,45))
         
 
 
 
+ff
