@@ -44,7 +44,7 @@ print("hello world")
 
 # armstrong 
 
-num =153 
+# num =153 
 # temp = num
 # total=0
 # nod = len(str(num))
@@ -118,3 +118,21 @@ def is_isomorphic(s, t):
 
 
 print(is_isomorphic("egg","add"))
+
+
+
+
+
+
+
+
+
+# check it is isomprophoc or not
+
+ 
+    
+
+
+
+
+ 
