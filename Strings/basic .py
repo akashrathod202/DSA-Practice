@@ -36,13 +36,29 @@ prints(s)
 
 
 
-def remove_space(arr):
-    result=[]
-    for i in arr:
-        if i != " ":
-           result.append(i)
+# def remove_space(arr):
+#     result=[]
+#     for i in arr:
+#         if i != " ":
+#            result.append(i)
         
-    return "".join(result)
+#     return "".join(result)
      
-arr='akash rathod'
-print(remove_space(arr))
+# arr='akash rathod'
+# print(remove_space(arr))
+
+
+
+s="banana"
+a={}
+b={}
+
+for ch in s:
+    if ch in a:
+        if ch in b:
+             b[ch]+=1
+        else:
+              b[ch]=1
+    else:
+        a[ch]=1
+print("The normal elements:", a, "and the duplicates that are present in the string:", b)
