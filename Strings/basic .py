@@ -66,9 +66,31 @@ prints(s)
 
 
 
+# s = "banana"
+
+# freq = {}
+
+# # Count frequency
+# for ch in s:
+#     if ch in freq:
+#         freq[ch] += 1
+#     else:
+#         freq[ch] = 1
+
+# # Find first non-repeating character
+# for ch in s:
+#     if freq[ch] == 1:
+#         print("First non-repeating character:", ch)
+#         break
+
+
+
+
 s = "banana"
 
 freq = {}
+max=0
+ 
 
 # Count frequency
 for ch in s:
@@ -77,8 +99,31 @@ for ch in s:
     else:
         freq[ch] = 1
 
-# Find first non-repeating character
+ 
+for i in freq.values():
+      if i > max:
+      max=i
+print(max)
+
+
+
+
+
+s = "banana"
+
+freq = {}
+ 
+ 
+
+# Count frequency
 for ch in s:
-    if freq[ch] == 1:
-        print("First non-repeating character:", ch)
-        break
+    if ch in freq:
+        freq[ch] += 1
+    else:
+        freq[ch] = 1
+
+min=list(freq.values())[0]
+for i in freq.values():
+      if i < min and i >= 0:
+      min=i
+print(min)
