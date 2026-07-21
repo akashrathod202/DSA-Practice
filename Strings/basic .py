@@ -49,16 +49,36 @@ prints(s)
 
 
 
-s="banana"
-a={}
-b={}
+# s="banana"
+# a={}
+# b={}
 
+# for ch in s:
+#     if ch in a:
+#         if ch in b:
+#              b[ch]+=1
+#         else:
+#               b[ch]=1
+#     else:
+#         a[ch]=1
+# print("The normal elements:", a, "and the duplicates that are present in the string:", b)
+
+
+
+
+s = "banana"
+
+freq = {}
+
+# Count frequency
 for ch in s:
-    if ch in a:
-        if ch in b:
-             b[ch]+=1
-        else:
-              b[ch]=1
+    if ch in freq:
+        freq[ch] += 1
     else:
-        a[ch]=1
-print("The normal elements:", a, "and the duplicates that are present in the string:", b)
+        freq[ch] = 1
+
+# Find first non-repeating character
+for ch in s:
+    if freq[ch] == 1:
+        print("First non-repeating character:", ch)
+        break
