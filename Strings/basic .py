@@ -86,44 +86,84 @@ prints(s)
 
 
 
-s = "banana"
+# s = "banana"
 
-freq = {}
-max=0
+# freq = {}
+# max=0
  
 
-# Count frequency
-for ch in s:
-    if ch in freq:
-        freq[ch] += 1
-    else:
-        freq[ch] = 1
+# # Count frequency
+# for ch in s:
+#     if ch in freq:
+#         freq[ch] += 1
+#     else:
+#         freq[ch] = 1
 
  
-for i in freq.values():
-      if i > max:
-      max=i
-print(max)
+# for i in freq.values():
+#       if i > max:
+#       max=i
+# print(max)
 
 
 
 
 
-s = "banana"
+# s = "banana"
 
-freq = {}
+# freq = {}
  
  
 
-# Count frequency
-for ch in s:
-    if ch in freq:
-        freq[ch] += 1
-    else:
-        freq[ch] = 1
+# # Count frequency
+# for ch in s:
+#     if ch in freq:
+#         freq[ch] += 1
+#     else:
+#         freq[ch] = 1
 
-min=list(freq.values())[0]
-for i in freq.values():
-      if i < min and i >= 0:
-      min=i
-print(min)
+# min=list(freq.values())[0]
+# for i in freq.values():
+#       if i < min and i >= 0:
+#       min=i
+# print(min)
+
+
+
+# chars = [
+#     'q', 'a', 'm', 'z', 'b', 'x', 'd', 'k', 't', 'f',
+#     'h', 'r', 'p', 'n', 'c', 'y', 'e', 'j', 'u', 'w',
+#     'g', 'l', 'o', 'i', 'v', 's'
+# ]
+
+ 
+
+# n=len(chars)
+
+# for i in range(n):
+#     for j in range(n-i-1):
+#         if chars[j] > chars[j+1]:
+#             chars[j],chars[j+1] =chars[j+1],chars[j]
+# result="".join(chars)
+# print( result)
+ 
+
+chars = [
+    'q', 'a', 'm', 'z', 'b', 'x', 'd', 'k', 't', 'f',
+    'h', 'r', 'p', 'n', 'c', 'y', 'e', 'j', 'u', 'w',
+    'g', 'l', 'o', 'i', 'v', 's'
+]
+
+ 
+
+n=len(chars)
+
+for i in range(n):
+    for j in range(n-i-1):
+        if chars[j] > chars[j+1]:
+            chars[j],chars[j+1] =chars[j+1],chars[j]
+result="".join(chars)
+print( result)
+ 
+
+ 
