@@ -98,33 +98,66 @@
 
 
 
-def anagram(a,b):
-    if len(a)  == len(b):
-        dic={}
-        for i in a:
-           if i in dic:
-             dic[i]+=1
-           else:
-             dic[i]=1
+# def anagram(a,b):
+#     if len(a)  == len(b):
+#         dic={}
+       
+#         for i in a:
+#            if i in dic:
+#              dic[i]+=1
+#            else:
+#              dic[i]=1
     
 
-        dic2={}
-        for j in b:
-            if j in  dic2:
-               dic2[j]+=1
-            else:
-               dic2[j]=1
+#         dic2={}
+#         for j in b:
+#             if j in  dic2:
+#                dic2[j]+=1
+#             else:
+#                dic2[j]=1
 
-        if dic == dic2 :
-          print("this is angrm")
-        else:
-           print("this is not angram")
+#         if dic == dic2 :
+#           print("this is angrm")
+#         else:
+#            print("this is not angram")
    
-    else :
-        print("this not an angram")
+#     else :
+#         print("this not an angram")
 
 
           
+# a='aaaa'
+# b='aaab'
+# (anagram(a,b))
+
+
+
+def anagram2(a,b):
+     if len(a) != len(b):
+          print("This is not an anagram")
+          return
+     dic={}
+     for ch in a:
+          if ch in dic:
+               dic[ch]+=1
+          else:
+               dic[ch]=1
+
+     for ch in b:
+          if ch not in dic:
+               print("this is not an angram")
+               return
+          dic[ch]-=1
+    
+     for  value in dic.values():
+          if value != 0:
+               print("this is not an angram")
+               return
+     print("This is an anagram")
+          
+
+
+
 a='aaaa'
 b='aaab'
-(anagram(a,b))
+(anagram2(a,b))
