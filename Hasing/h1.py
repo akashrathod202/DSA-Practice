@@ -132,32 +132,50 @@
 
 
 
-def anagram2(a,b):
-     if len(a) != len(b):
-          print("This is not an anagram")
-          return
-     dic={}
-     for ch in a:
-          if ch in dic:
-               dic[ch]+=1
-          else:
-               dic[ch]=1
+# def anagram2(a,b):
+#      if len(a) != len(b):
+#           print("This is not an anagram")
+#           return
+#      dic={}
+#      for ch in a:
+#           if ch in dic:
+#                dic[ch]+=1
+#           else:
+#                dic[ch]=1
 
-     for ch in b:
-          if ch not in dic:
-               print("this is not an angram")
-               return
-          dic[ch]-=1
+#      for ch in b:
+#           if ch not in dic:
+#                print("this is not an angram")
+#                return
+#           dic[ch]-=1
     
-     for  value in dic.values():
-          if value != 0:
-               print("this is not an angram")
-               return
-     print("This is an anagram")
+#      for  value in dic.values():
+#           if value != 0:
+#                print("this is not an angram")
+#                return
+#      print("This is an anagram")
           
 
 
 
-a='aaaa'
-b='aaab'
-(anagram2(a,b))
+# a='aaaa'
+# b='aaab'
+# (anagram2(a,b))
+
+
+def majorityElement(nums):
+  count={}
+  for ch in nums:
+     if  ch in count:
+        count[ch]+=1
+     else:
+        count[ch]=1
+
+  for key, value in count.items():
+    if value >len(nums)// 2:
+       return key
+     
+nums = [2,2,1,1,1,2,2]
+print(majorityElement(nums))
+
+
