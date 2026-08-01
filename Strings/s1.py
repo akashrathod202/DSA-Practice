@@ -97,36 +97,53 @@ print("hello world")
 
 #isomophic problem
 
-def is_isomorphic(s, t):
-    map1 = {}
-    map2 = {}
+# def is_isomorphic(s, t):
+#     map1 = {}
+#     map2 = {}
 
-    for i in range(len(s)):
-        if s[i] in map1:
-            if map1[s[i]] != t[i]:
-                return False
-        else:
-            map1[s[i]] = t[i]
+#     for i in range(len(s)):
+#         if s[i] in map1:
+#             if map1[s[i]] != t[i]:
+#                 return False
+#         else:
+#             map1[s[i]] = t[i]
 
-        if t[i] in map2:
-            if map2[t[i]] != s[i]:
-                return False
-        else:
-            map2[t[i]] = s[i]
+#         if t[i] in map2:
+#             if map2[t[i]] != s[i]:
+#                 return False
+#         else:
+#             map2[t[i]] = s[i]
 
-    return True
-
-
-print(is_isomorphic("egg","add"))
+#     return True
 
 
+# print(is_isomorphic("egg","add"))
 
 
 
 
 
+# largest substring in string using set using brute  
+
+s = "abcabcbb"
+n = len(s)
+ans = 0
+longest=''
+
+for i in range(n):
+    seen = set()
+    for j in range(i, n):
+        if s[j] in seen:
+            break
+        seen.add(s[j])
+        if j-i +1 > ans :
+         ans=max(ans,j-i+1)
+         longest=s[i:j+1]
+
+print(ans,longest)
 
 
+ 
 # check it is isomprophoc or not
 
  
