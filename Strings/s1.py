@@ -125,22 +125,50 @@ print("hello world")
 
 # largest substring in string using set using brute  
 
-s = "abcabcbb"
-n = len(s)
+# s = "abcabcbb"
+# n = len(s)
+# ans = 0
+# longest=''
+
+# # for i in range(n):
+# #     seen = set()
+# #     for j in range(i, n):
+# #         if s[j] in seen:
+# #             break
+# #         seen.add(s[j])
+# #         if j-i +1 > ans :
+# #          ans=max(ans,j-i+1)
+# #          longest=s[i:j+1]
+
+# # print(ans,longest)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+left = 0
+seen = set()
 ans = 0
-longest=''
 
-for i in range(n):
-    seen = set()
-    for j in range(i, n):
-        if s[j] in seen:
-            break
-        seen.add(s[j])
-        if j-i +1 > ans :
-         ans=max(ans,j-i+1)
-         longest=s[i:j+1]
+for right in range(len(s)):
 
-print(ans,longest)
+    while s[right] in seen:
+        seen.remove(s[left])
+        left += 1
+
+    seen.add(s[right])
+    ans = max(ans, right - left + 1)
+
+print(ans)
 
 
  
