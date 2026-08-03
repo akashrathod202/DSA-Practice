@@ -143,6 +143,41 @@ print("hello world")
 # # print(ans,longest)
 
 
+# Maximum Average Subarray
+
+# def average(arr,k):
+#     A_window=sum(arr[:k])
+#     ans=A_window
+ 
+      
+#     for i in range(k,len(arr)):
+#         A_window+=nums[i]
+#         A_window-=nums[i-k]
+        
+#         ans=max(ans,A_window)
+    
+#     return (ans/k)
+        
+    
+# nums = [1,12,-5,-6,50,3]
+# print(average(nums,4))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
