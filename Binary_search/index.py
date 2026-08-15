@@ -50,33 +50,90 @@
 # print(first_occurrence(arr,2))
 
 
-# last_occurence
+# # last_occurence
 
-def last_occurence(arr,target):
-    low=0
-    high=len(arr)-1
-    answer=-1
+# def last_occurence(arr,target):
+#     low=0
+#     high=len(arr)-1
+#     answer=-1
 
 
-    while low <= high:
-        mid=(low + high) // 2
+#     while low <= high:
+#         mid=(low + high) // 2
 
-        if arr[mid] == target:
-            answer=mid
-            low=mid+1
+#         if arr[mid] == target:
+#             answer=mid
+#             low=mid+1
 
-        elif arr[mid] < target:
-            low=mid+1
+#         elif arr[mid] < target:
+#             low=mid+1
 
-        else:
-             high = mid - 1
-    return answer
+#         else:
+#              high = mid - 1
+#     return answer
 
              
 
-arr = [1, 2, 2, 2, 4, 5]
-print(last_occurence(arr,2))
+# arr = [1, 2, 2, 2, 4, 5]
+# print(last_occurence(arr,2))
 
+
+
+
+
+
+# lower bound
+
+
+# def lower_bound(arr,target):
+#     low=0
+#     high=len(arr)-1
+#     answer=-1
+
+#     while low <= high:
+#         mid=(low + high) // 2
+
+#         if arr[mid] >= target:
+#             answer=mid
+#             high=mid-1
+        
+#         elif arr[mid] < target:
+#             low=mid+1
+        
+#         else :
+#             high=mid-1
+#     return answer
+
+
+# arr = [1, 2, 2, 2, 4, 4, 6, 8]
+# print(lower_bound(arr,4))
+
+
+
+# uperbound
+
+
+def upper_bound(arr, target):
+    low = 0
+    high = len(arr) - 1
+    answer = -1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if arr[mid] > target:
+            answer = mid
+            high = mid - 1
+
+        else:
+            low = mid + 1
+
+    return answer
+
+
+arr = [1, 2, 2, 2, 4, 4, 6, 8]
+
+print(upper_bound(arr, 4))
 
 
 
