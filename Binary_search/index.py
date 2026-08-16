@@ -113,27 +113,64 @@
 # uperbound
 
 
-def upper_bound(arr, target):
-    low = 0
-    high = len(arr) - 1
-    answer = -1
+# def upper_bound(arr, target):
+#     low = 0
+#     high = len(arr) - 1
+#     answer = -1
 
-    while low <= high:
-        mid = (low + high) // 2
+#     while low <= high:
+#         mid = (low + high) // 2
 
-        if arr[mid] > target:
-            answer = mid
-            high = mid - 1
+#         if arr[mid] > target:
+#             answer = mid
+#             high = mid - 1
+
+#         else:
+#             low = mid + 1
+
+#     return answer
+
+
+# arr = [1, 2, 2, 2, 4, 4, 6, 8]
+
+# print(upper_bound(arr, 4))
+
+
+
+# arr = [10, 20, 30, 40, 50, 60, 70]
+# left=1
+# right=5
+
+# mid=left+(right-left)//2
+# print(mid)
+
+
+def find_and_insert(arr,target):
+    left=0
+    right=len(arr)-1
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        if arr[mid] ==target:
+            return mid
+        
+        elif arr[mid] < target:
+            left=mid+1
 
         else:
-            low = mid + 1
+            right=mid-1
+    return left
 
-    return answer
+        
 
-
-arr = [1, 2, 2, 2, 4, 4, 6, 8]
-
-print(upper_bound(arr, 4))
+         
 
 
+nums = [1, 3, 5, 6]
+print(find_and_insert(nums,2))
 
+
+
+
+        
+       
