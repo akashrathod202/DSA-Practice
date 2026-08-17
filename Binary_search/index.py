@@ -145,30 +145,61 @@
 # print(mid)
 
 
-def find_and_insert(arr,target):
-    left=0
-    right=len(arr)-1
+# def find_and_insert(arr,target):
+#     left=0
+#     right=len(arr)-1
     
-    while left <= right:
-        mid = left + (right - left) // 2
-        if arr[mid] ==target:
-            return mid
+#     while left <= right:
+#         mid = left + (right - left) // 2
+#         if arr[mid] ==target:
+#             return mid
         
-        elif arr[mid] < target:
-            left=mid+1
+#         elif arr[mid] < target:
+#             left=mid+1
 
-        else:
-            right=mid-1
-    return left
+#         else:
+#             right=mid-1
+#     return left
 
         
 
          
 
 
-nums = [1, 3, 5, 6]
-print(find_and_insert(nums,2))
+# nums = [1, 3, 5, 6]
+# print(find_and_insert(nums,2))
 
+
+
+
+
+
+# 
+
+
+
+
+
+
+/
+# Sqrt(x)
+
+num = 12
+
+left = 1
+right = num
+answer = 0
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if mid * mid <= num:
+        answer = mid
+        left = mid + 1
+    else:
+        right = mid - 1
+
+print(answer)
 
 
 
