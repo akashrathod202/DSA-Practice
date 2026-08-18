@@ -181,25 +181,45 @@
 
 
 
-/
+
 # Sqrt(x)
 
-num = 12
+# num = 12
 
-left = 1
-right = num
-answer = 0
+# left = 1
+# right = num
+# answer = 0
 
-while left <= right:
-    mid = (left + right) // 2
+# while left <= right:
+#     mid = (left + right) // 2
 
-    if mid * mid <= num:
-        answer = mid
-        left = mid + 1
-    else:
-        right = mid - 1
+#     if mid * mid <= num:
+#         answer = mid
+#         left = mid + 1
+#     else:
+#         right = mid - 1
 
-print(answer)
+# print(answer)
+
+
+
+# find peak
+
+def peak(arr):
+    left=0
+    right=len(arr)-1
+
+    while left < right:
+        mid=(left + right) // 2
+        
+        if arr[mid] < arr[mid+1]:
+            left=mid+1
+        else:
+            right=mid-1
+    return arr[left]
+
+n=[1, 2, 3, 4, 5, 3, 1]
+print(peak(n))
 
 
 
