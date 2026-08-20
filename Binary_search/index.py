@@ -205,22 +205,83 @@
 
 # find peak
 
-def peak(arr):
+# def peak(arr):
+#     left=0
+#     right=len(arr)-1
+
+#     while left < right:
+#         mid=(left + right) // 2
+        
+#         if arr[mid] < arr[mid+1]:
+#             left=mid+1
+#         else:
+#             right=mid-1
+#     return arr[left]
+
+# n=[1, 2, 3, 4, 5, 3, 1]
+# print(peak(n))
+
+
+
+
+
+
+# binary search answer 
+
+
+
+# def find_the_speed(arr):
+#     left=1
+#     right=len(arr)
+
+#     while left < right:
+#         mid=(left + right) // 2
+#         if mid * 3 >= 12:
+#            right=mid-1
+#         else:
+#             left=mid+1
+#     return left
+
+    
+# a=[1,2,3,4,5,6,7,8,9,10,11,12]
+# print(find_the_speed(a))
+
+
+# binary serch rottated array
+
+
+def search(arr,t):
     left=0
     right=len(arr)-1
+    while left <= right :
+        mid=(left + right)//2
 
-    while left < right:
-        mid=(left + right) // 2
+        if arr[mid] == t:
+            return mid
         
-        if arr[mid] < arr[mid+1]:
-            left=mid+1
+        if arr[left] <= arr[mid]:
+             
+             if arr[left] <= t < arr[mid]:
+                 right=mid -1
+             else:
+                left=mid + 1
         else:
-            right=mid-1
-    return arr[left]
+            if arr[mid] < t <= arr[right]:
+                left=mid+1
+            else:
+                right=mid-1
 
-n=[1, 2, 3, 4, 5, 3, 1]
-print(peak(n))
+    return -1
+                  
 
+        
+    
+
+
+arr=[3,4,5,6,7,0,1,2]
+print(search(arr,0))
+
+ 
 
 
         
