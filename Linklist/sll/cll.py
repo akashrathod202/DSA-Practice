@@ -162,13 +162,12 @@ class cll:
     def reverse(self):
 
         if self.head is None or self.head.next == self.head:
-           print("the list is empty so we cat reverse it")
+          
            return
         
         pre=None
         curr=self.head
         
-        next_node=None
 
 
         while curr !=self.head:

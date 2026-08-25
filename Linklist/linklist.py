@@ -39,11 +39,11 @@
 #         self.head=None
 
 
-#     def insertend(self,value):
+#   def insertend(self,value):
 #         temp=node(value)
 #         if(self.head != None):
 #             t1=self.head
-#             while(t1.next != None):
+#             while(t1.next != None):s
 #                 t1=t1.next
 #             t1.next=temp
 #         else:
