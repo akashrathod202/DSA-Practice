@@ -261,80 +261,232 @@
 
 # question of cycle detect
 
+# class Node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.next=None
+
+# class sll:
+#     def __init__(self):
+#         self.head=None
+
+#     def inset_at_end(self,value):
+#         newnode=Node(value)
+
+#         if self.head == None:
+#             self.head=newnode
+#             return
+        
+#         temp=self.head
+
+#         while temp.next != None:
+#             temp=temp.next
+        
+#         temp.next=newnode
+
+#         # finding the middle useing the slow and fast pointe
+
+#     def find_mid(self):
+
+#         slow=self.head
+#         fast=self.head
+
+
+#         while fast and fast.next:
+#             slow=slow.next
+#             fast=fast.next.next
+
+        
+       
+#         return slow
+
+
+#     def has_cycle(self):
+#         slow=self.head
+#         fast=self.head
+
+#         while fast and fast.next:
+#             slow=slow.next
+#             fast=fast.next.next
+
+#             if slow == fast:
+#                 return True
+            
+#         return False
+
+
+#     def print(self):
+#         if self.head == None:
+#             return
+        
+#         t=self.head
+
+#         while t != None:
+#             print(t.data,end="->")
+#             t=t.next
+
+# obj = sll()
+# obj.inset_at_end(1)
+# obj.inset_at_end(2)
+# obj.inset_at_end(3)
+# obj.inset_at_end(4)
+# obj.inset_at_end(5)
+
+# obj.print()
+
+# middle = obj.find_mid()
+# print("middle element is:", middle.data)
+
+# print("Cycle present:", obj.has_cycle())
+
+
+
+
+
+
+# question node count and max node
+
+
 class Node:
     def __init__(self,data):
         self.data=data
         self.next=None
 
-class sll:
+class Linklist:
     def __init__(self):
         self.head=None
 
-    def inset_at_end(self,value):
+    def Insert(self,value):
         newnode=Node(value)
 
-        if self.head == None:
-            self.head=newnode
-            return
-        
-        temp=self.head
+        newnode.next=self.head
+        self.head=newnode
 
-        while temp.next != None:
+    def inser_at_end(self,value):
+        newnode=Node(value)
+        if self.head is None:
+            self.head = newnode
+            return
+        temp=self.head
+        while temp.next is not None:
             temp=temp.next
-        
         temp.next=newnode
 
-        # finding the middle useing the slow and fast pointe
+    def sum_of_nodes(self):
+        if self.head is None:
+            print("list is empty")
+            return
+        x = self.head
+        total=0
 
-    def find_mid(self):
+        while x is not None:
+            total+=x.data
+            x=x.next
+        print(total)
 
-        slow=self.head
-        fast=self.head
+    # def maximum(self):
+    #     if self.head is None:
+    #         print("list is empty")
+    #         return
+    #         maximum_value=self.head.data
+    #     x=self.head
+         
+    #     while x is not None:
+    #         if x.data > maximum_value:
+    #             maximum_value=x.data
 
+    #         x=x.next
 
-        while fast and fast.next:
-            slow=slow.next
-            fast=fast.next.next
-
-        
+    #     print(maximum_value)
        
-        return slow
-
-
-    def has_cycle(self):
-        slow=self.head
-        fast=self.head
-
-        while fast and fast.next:
-            slow=slow.next
-            fast=fast.next.next
-
-            if slow == fast:
-                return True
-            
-        return False
-
-
-    def print(self):
-        if self.head == None:
+         
+    def find_the_value(self, x):
+        if self.head is None:
+            print("The list is empty")
             return
         
-        t=self.head
+        s = self.head
+        
+        while s is not None:
+            if s.data == x:
+                print("Found:", x)
+                return
+            s = s.next
+        
+        print("Not found")
+        
 
-        while t != None:
-            print(t.data,end="->")
-            t=t.next
 
-obj = sll()
-obj.inset_at_end(1)
-obj.inset_at_end(2)
-obj.inset_at_end(3)
-obj.inset_at_end(4)
-obj.inset_at_end(5)
 
-obj.print()
+    def delete_first(self):
 
-middle = obj.find_mid()
-print("middle element is:", middle.data)
+        if self.head is None:
+            print("list empty")
+            return
+        
+         
+        self.head=self.head.next
 
-print("Cycle present:", obj.has_cycle())
+    def delete_at_last(self):
+        if self.head is None:
+            print("the list is empty")
+            return
+        temp=self.head
+
+        while temp.next.next is not None:
+            temp=temp.next
+        temp.next=None
+
+    def delete_by_value(self, x):
+        if self.head is None:
+            print("The list is empty")
+            return
+        
+            # If first node contains x
+        if self.head.data == x:
+            self.head = self.head.next
+            return
+        
+        prev = None
+        temp = self.head
+        
+        while temp is not None:
+        
+            if temp.data == x:
+                prev.next = temp.next
+                return
+        
+            prev = temp
+            temp = temp.next
+        
+            print("Value not found")
+
+
+    def Display(self):
+        if self.head is None:
+            print("link is empty:")
+            return
+
+        temp=self.head
+
+        while temp is not None:
+            print(temp.data,end='->')
+            temp=temp.next
+        print("None")
+
+ll=Linklist()
+ll.Insert(60)
+ll.Insert(20)
+ll.Insert(15)
+ll.Insert(10)
+ll.Insert(5)
+ll.inser_at_end(1000)
+ll.delete_first() 
+ll.delete_at_last()
+ll.delete_by_value(10)
+ll.Display()
+ll.sum_of_nodes()
+# ll.maximum()
+ll.find_the_value(20)
+
+
