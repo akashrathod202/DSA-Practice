@@ -146,7 +146,21 @@ class doublyll:
                 print(temp.data,end="<->")
                 temp=temp.next 
            print("None")
-        
+      def rev_display(self):
+        if self.head is None:
+           print("List is empty")
+           return
+
+        temp = self.head
+
+        while temp.next is not None:
+           temp = temp.next
+
+        while temp is not None:
+            print(temp.data, end="<->")
+            temp = temp.prev
+
+        print("None")
 
 
 obj=doublyll()
@@ -159,5 +173,6 @@ obj.deleteat_at_end()
 obj.deleate_at_mid(20)
 obj.deleteat_start()
 obj.printall()
+obj.rev_display()
            
 
