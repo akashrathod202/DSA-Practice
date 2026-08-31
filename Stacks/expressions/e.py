@@ -169,24 +169,48 @@
 # prifix to infix
 
 
-class solution:
-    def prifix_to_infix(self,s):
-        stack=[]
+# class solution:
+#     def prifix_to_infix(self,s):
+#         stack=[]
 
-        temp=s[::-1]
-        for ch in temp:
+#         n=len(s)
+#         for i in range(n-1,-1,-1):
+#             ch=s[i]
+#             if ch.isalnum():
+#                 stack.append(ch)
+
+#             else:
+#                 op1=stack.pop()
+#                 op2=stack.pop()
+
+#                 new=f"({op1}{ch}{op2})"
+#                 stack.append(new)
+#         return stack[-1]
+
+
+# obj=solution()
+# print(obj.prifix_to_infix("*+abc"))
+
+
+class Solution:
+    def postfix_to_prefix(self, s):
+        stack = []
+
+        for ch in s:
             if ch.isalnum():
                 stack.append(ch)
-
             else:
-                op1=stack.pop()
-                op2=stack.pop()
+                op1 = stack.pop()
+                op2 = stack.pop()
 
-                new=f"({op1}{ch}{op2})"
-                stack.append(new)
+                ans = ch + op2 + op1
+                stack.append(ans)
+
         return stack[-1]
 
 
-obj=solution()
-print(obj.prifix_to_infix("*+abc"))
+obj = Solution()
+print(obj.postfix_to_prefix("ab+c*"))
+
+
 

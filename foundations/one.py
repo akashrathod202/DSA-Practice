@@ -74,4 +74,13 @@
 
 
 
-ff
+def move_to_zero(arr):
+    left=0
+    for i in range(len(arr)):
+        if arr[i]!= 0:
+            arr[left] ,arr[i] = arr[i],arr[left]
+            left+=1
+    return arr
+
+arr=[0,3,56,3,70,0,6,]
+print(move_to_zero(arr))

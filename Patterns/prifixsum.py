@@ -40,6 +40,11 @@
 #                 count +=1
 #     return count
 
+
+
+
+
+
 # array=[1,2,3,4,2,4,2,5,3,5,9,6,8,7,4,6,6,4]
 # k=23
 # print(subarray(array,k))

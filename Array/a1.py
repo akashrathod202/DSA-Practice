@@ -90,19 +90,19 @@
 
 
 
-# to create the array of zero we use zeros
+# # to create the array of zero we use zeros
 
-val=zeros(5)
-print(val)
-
-
-# to create the array of one we use ones
-
-val=ones(5)
-print(val)
+# val=zeros(5)
+# print(val)
 
 
-# if we have to create array of any another number for that we use full
+# # to create the array of one we use ones
 
-val=full(5,7)
-print(val)
+# val=ones(5)
+# print(val)
+
+
+# # if we have to create array of any another number for that we use full
+
+# val=full(5,7)
+# print(val)

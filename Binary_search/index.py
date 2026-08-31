@@ -247,7 +247,7 @@
 # print(find_the_speed(a))
 
 
-# binary serch rottated array
+# sorted array binary search problem
 
 
 def search(arr,t):

@@ -181,23 +181,46 @@
 # checking is this a pladrome or not using two pointer
 
 
-arr=[1,2,3,2,1]
-left=0
-right=len(arr)-1
+# arr=[1,2,3,2,1]
+# left=0
+# right=len(arr)-1
 
-is_palindrome=True
+# is_palindrome=True
 
-while left < right:
-     if arr[left]  != arr[right]:
-         is_palindrome=False
-         break
-     left+=1
-     right-=1
+# while left < right:
+#      if arr[left]  != arr[right]:
+#          is_palindrome=False
+#          break
+#      left+=1
+#      right-=1
      
-if is_palindrome:
-    print("this is a palindrome")
-else:
-    print("this not a palindrome")
+# if is_palindrome:
+#     print("this is a palindrome")
+# else:
+#     print("this not a palindrome")
+
+
+
+
+
+
+def check(str):
+    dect ={}
+    for i in str:
+        if i in dect:
+            dect[i]+=1
+        else:
+             dect[i]=1
+    print(dect)
+         
+    
+    count=0
+    for ch in dect.values():
+        if ch == 1:
+             count+=1
+    return count
+        
+print(check("akash"))
 
    
     
