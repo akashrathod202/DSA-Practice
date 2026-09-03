@@ -149,24 +149,55 @@ class SinglyLinkedList:
 
        
 
-    def check_start(self):
+    # def check_start(self):
        
 
-        if self.head is None:
-            print("the list is empty")
-            return
-        visted=()
-        temp=self.head
+    #     if self.head is None:
+    #         print("the list is empty")
+    #         return
+    #     visted=()
+    #     temp=self.head
 
-        while temp:
-            if temp in visted:
-                 return temp
+    #     while temp:
+    #         if temp in visted:
+    #              return temp
             
-            visted.add(temp)
+    #         visted.add(temp)
 
-            temp=temp.next
+    #         temp=temp.next
                 
-        print("we got")
+    #     print("we got")
+
+
+    def check_start_by_slow_and_fast_pointer(self):
+        if self.head is None:
+            return None
+        
+        slow=self.head
+        fast=self.head
+
+
+        while fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
+            if  slow ==fast:
+               break
+        else:
+                return None
+            
+        slow=self.head
+
+        while slow!=fast:
+            slow=slow.next
+            fast=fast.next
+        return slow
+              
+             
+
+             
+
+        
+        
 
  
     def display(self):
