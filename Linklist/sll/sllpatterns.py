@@ -196,8 +196,23 @@ class SinglyLinkedList:
 
              
 
+    def reverse(self):
+        if self.head is None:
+            print("thsi list is empty we cant reverse it")
+            return
         
+        current=self.head
+        prev=None
+
+        while current is not None:
+            next_node=current.next
+            current.next=prev
+            prev=current
+            current=next_node
+
         
+        self.head=prev
+
 
  
     def display(self):
@@ -226,6 +241,7 @@ ll.create_loop()
 # ll.delete_byvalue(509)
 # print(ll.want_list(40))
 print(ll.check_start())
+ll.reverse()
 # ll.display()
 # print(ll.detect_cycle())
 
