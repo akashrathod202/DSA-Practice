@@ -246,7 +246,7 @@ ll.reverse()
 # print(ll.detect_cycle())
 
  
- class node:
+class node:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -366,3 +366,31 @@ merged_head = ll.mergelist(ll2)
 
 print("Merged List:")
 ll.display(merged_head)
+
+
+
+
+# ///////////////////////////
+
+  def fast_and_slow_pointer(self):
+        temp = []
+        current = self.head
+
+        while current is not None:
+            temp.append(current.data)
+            current = current.next
+
+        left = 0
+        right = len(temp) - 1
+
+        while left < right:
+
+            print(temp[left], temp[right])
+
+            if temp[left] != temp[right]:
+                return False
+
+            left += 1
+            right -= 1
+
+        return True
